@@ -1,0 +1,30 @@
+site_name: Room Creatore Documentation
+site_author: Theo Winter
+site_url: https://aerobless.github.io/RoomCreator/
+
+repo_name: aerobless/RoomCreator
+repo_url: https://github.com/aerobless/RoomCreator
+
+theme:
+  name: material
+  language: en
+#  logo: './logo.svg'
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/aerobless
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/TheodorWinter
+
+google_analytics:
+  - UA-90728111-3
+  - auto
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
