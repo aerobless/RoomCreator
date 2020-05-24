@@ -1,4 +1,4 @@
-site_name: Room Creatore Documentation
+site_name: Room Creator Documentation
 site_author: Theo Winter
 site_url: https://aerobless.github.io/RoomCreator/
 
@@ -24,6 +24,8 @@ google_analytics:
 markdown_extensions:
   - admonition
   - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - codehilite:
       guess_lang: false
   - toc:
