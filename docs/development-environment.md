@@ -47,6 +47,8 @@ I've skipped the ADB part of the instructions since I don't expect to need this 
 
 > https://developer.oculus.com/documentation/unity/unity-conf-settings/
 
+#### Build Settings
+
 + Unity -> File -> Build Settings
     + Texture Compression: [ASTC](https://en.wikipedia.org/wiki/Adaptive_Scalable_Texture_Compression)
         + Setting this seems to prompt unity to do a bunch of re-indexing.. so I had time to read what ASTC actually is
@@ -54,3 +56,36 @@ I've skipped the ADB part of the instructions since I don't expect to need this 
     + Development build: enable for now, disable for final build
     + Click Switch Platform if a notice pops up
     
+#### Project Settings
+
++ Edit -> Project Settings -> Player
+    + Company Name: Sixty Meters
+    + Product Name: RoomCreator
+    + Version: 0.1
+    + Android -> Other Settings
+        + Package Name: com.SixtyMeters.RoomCreator
+        + Version: 0.1
+        + Minimum API Level: Android 6.0 (L23) for Oculus Quest
+        + Target API Level: Automatic
+        + Install location: Automatic
+
++ Edit -> Project Settings -> XR Plugin Management -> Install XR Plugin Management
+    + Android
+        + Enable Oculus (this takes a while as well)
+
++ Edit -> Project Settings -> Player -> Android -> Other Settings
+    + Color Space: Linear
+    + Disable Auto Graphics API, instead use OpenGL ES3.0, Vulkan (experimental as of 2020)
+    + Enable Multithreaded Rendering
+    + Enable Low Overhead Mode (couldn't find this option)
+
++ Edit -> Project Settings -> Quality
+    + Pixel Light Count: 1
+    + Texture Quality: Full Res
+    + Anisotropic Textures: Per Texture
+    + Anti Aliasing: 4x
+    + Disable Soft Particles
+    + Enable Realtime Reflection Probes
+    + Enable Billboards Face Camera
+
+Generate Android Manifest: Oculus -> Tools -> Create store-compatible Android Manifest
