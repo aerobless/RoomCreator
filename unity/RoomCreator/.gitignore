@@ -60,3 +60,6 @@ crashlytics-build.properties
 
 # Apple
 .DS_Store
+
+# Third party assets
+Assets/Oculus
